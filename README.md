@@ -1,5 +1,5 @@
 <p align="center">
-	<h2 align="center"><b>"Health Bars" Mod for Resident Evil Village</b></h2>
+	<h2 align="center"><b>"Health Bars" Mod for Resident Evil 2 Remake</b></h2>
 	<p align="center">
 		<b>English</b> | <a href="README_CN.md">简体中文</a>
 	</p>
