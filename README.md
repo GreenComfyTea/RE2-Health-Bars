@@ -39,10 +39,10 @@
 		<img alt="Maintenance" src="https://custom-icon-badges.demolab.com/maintenance/yes/2024?logo=tools" />
 	</a>
 	<br>
-	<a href="https://www.nexusmods.com/residentevil22019/mods/1097">
+	<a href="https://nexusmods.com/residentevil22019/mods/1097">
 		<img alt="REFramework Dependency" src="https://custom-icon-badges.demolab.com/badge/dependency-REFramework%20v1.5.3%2B-green?logo=package-dependencies" />
 	</a>
-   	<a href="https://nexusmods.com/residentevilvillage/mods/400">
+   	<a href="https://nexusmods.com/residentevil22019/mods/1475">
 		<img alt="In-Game Menu Dependency" src="https://custom-icon-badges.demolab.com/badge/dependency-REFramework%20Direct2D%20v0.4.0%2B-yellow?logo=package-dependencies" />
 	</a>
 		<br>
@@ -129,12 +129,12 @@
 * **[Nexus Mods](https://nexusmods.com/residentevilvillage/mods/401)**
 
 # Requirements
-1. [REFramework](https://www.nexusmods.com/residentevil22019/mods/1097) (v1.5.3+);
-2. [REFramework Direct2D](https://nexusmods.com/residentevilvillage/mods/400) (v0.4.0+).
+1. [REFramework](https://nexusmods.com/residentevil22019/mods/1097) (v1.5.3+);
+2. [REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475) (v0.4.0+).
 
 # How to install:
-1. Install [REFramework](https://www.nexusmods.com/residentevil22019/mods/1097);
-2. Install [REFramework Direct2D](https://nexusmods.com/residentevilvillage/mods/400);
+1. Install [REFramework](https://nexusmods.com/residentevil22019/mods/1097);
+2. Install [REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475);
 >**:pushpin: Windows:** Works normally.
 
 >**:pushpin: Linux:** Latest Experimental Proton seems to have it working normally as well (https://github.com/cursey/reframework-d2d/issues/5).
@@ -143,8 +143,8 @@
 
 
 3. Download the mod:
-    * Official release can be downloaded from [Nexus Mods](https://www.nexusmods.com/residentevilvillage/mods/401);
-    * Nightly builds are available in [this repo](https://github.com/GreenComfyTea/RE2-Health-Bars) and can contain broken functionality, debugging info on screen, bugs and might require the latest [nightly build](https://github.com/praydog/REFramework-nightly/releases) of [REFramework](https://www.nexusmods.com/residentevil22019/mods/1097). Use with caution!
+    * Official release can be downloaded from [Nexus Mods](https://nexusmods.com/residentevilvillage/mods/401);
+    * Nightly builds are available in [this repo](https://github.com/GreenComfyTea/RE2-Health-Bars) and can contain broken functionality, debugging info on screen, bugs and might require the latest [nightly build](https://github.com/praydog/REFramework-nightly/releases) of [REFramework](https://nexusmods.com/residentevil22019/mods/1097). Use with caution!
 4. Extract the mod from the archive and copy it into Resident Evil 2 folder. Final path should look like this: `/RESIDENT EVIL 2  BIOHAZARD RE2/reframework/`  
 
 > There should be three folders in the REFframework folder: `autorun`, `data` and `font`.
