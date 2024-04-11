@@ -52,11 +52,13 @@ local get_game_object_method = enemy_controller_type_def:get_method("get_GameObj
 local on_hit_damage_method = enemy_controller_type_def:get_method("HitController_OnHitDamage");
 local get_hit_point_method = enemy_controller_type_def:get_method("get_HitPoint");
 local dead_method = enemy_controller_type_def:get_method("dead");
+local do_awake_b_529_4_method = enemy_controller_type_def:get_method("<doAwake>b__529_4");
+local get_no_damage_method = enemy_controller_type_def:get_method("get_NoDamage");
 
-local hit_point_controller_type_def = get_hit_point_method:get_return_type();
-local get_current_hit_point_method = hit_point_controller_type_def:get_method("get_CurrentHitPoint");
-local get_default_hit_point_method = hit_point_controller_type_def:get_method("get_DefaultHitPoint");
-local get_is_dead_point_method = hit_point_controller_type_def:get_method("get_IsDead");
+local enemy_hit_point_controller_type_def = get_hit_point_method:get_return_type();
+local get_current_hit_point_method = enemy_hit_point_controller_type_def:get_method("get_CurrentHitPoint");
+local get_default_hit_point_method = enemy_hit_point_controller_type_def:get_method("get_DefaultHitPoint");
+local get_is_dead_method = enemy_hit_point_controller_type_def:get_method("get_IsDead");
 
 local game_object_type_def = get_game_object_method:get_return_type();
 local get_transform_method = game_object_type_def:get_method("get_Transform");
@@ -134,11 +136,7 @@ function this.update()
 	end
 end
 
-function this.update_health(enemy, damage)
-	if damage == nil then
-		damage = 0;
-	end
-
+function this.update_health(enemy)
 	local hit_point_controller = get_hit_point_method:call(enemy.enemy_controller);
 	if hit_point_controller == nil then
 		error_handler.report("enemy_handler.update_health", "No HitPointController");
@@ -147,14 +145,12 @@ function this.update_health(enemy, damage)
 
 	local health = get_current_hit_point_method:call(hit_point_controller);
 	local max_health = get_default_hit_point_method:call(hit_point_controller);
-
-	local is_dead = get_is_dead_point_method:call(hit_point_controller);
-	
+	local is_dead = get_is_dead_method:call(hit_point_controller);
 
 	if health == nil then
 		error_handler.report("enemy_handler.update_health", "No Health");
 	else
-		enemy.health = utils.math.round(health - damage);
+		enemy.health = utils.math.round(health);
 	end
 
 	if max_health == nil then
@@ -210,23 +206,14 @@ function this.update_head_joint(enemy)
 	end
 
 	local joint = get_joint_by_name_method:call(enemy_transform, "head")
-	or get_joint_by_name_method:call(enemy_transform, "Head");
+	or get_joint_by_name_method:call(enemy_transform, "Head")
+	or get_joint_by_name_method:call(enemy_transform, "mouthHead") -- G 5th Form
+	or get_joint_by_name_method:call(enemy_transform, "root");
 
 	if joint == nil then
-
-		local joints = enemy_transform:get_Joints();
-
-		for i = 0, 500 do
-			local joint = joints[i];
-			if joint == nil then
-				break;
-			end
-
-			log.debug(joint:get_Name());
-		end
-
+		error_handler.report("enemy_handler.update_head_joint", "No Head Joint");
 		return;
-	end;
+	end
 
 	enemy.head_joint = joint;
 end
@@ -263,7 +250,7 @@ function this.draw_enemies()
 		return;
 	end
 
-	if not cached_config.settings.render_when_game_timer_is_paused and game_handler.game.is_paused then
+	if not cached_config.settings.render_when_game_is_paused and game_handler.game.is_paused then
 		return;
 	end
 
@@ -279,6 +266,10 @@ function this.draw_enemies()
 
 	for enemy_controller, enemy in pairs(this.enemy_list) do
 		if max_distance ~= 0 and enemy.distance > max_distance then
+			goto continue;
+		end
+
+		if enemy.max_health <= 1 then
 			goto continue;
 		end
 
@@ -377,32 +368,21 @@ function this.draw_enemies()
 end
 
 function this.on_update(enemy_controller)
-	this.get_enemy(enemy_controller);
+	local enemy = this.get_enemy(enemy_controller);
+end
+
+function this.on_do_awake_b_529_4(enemy_controller)
+	local enemy = this.get_enemy(enemy_controller);
+	this.update_health(enemy);
 end
 
 function this.on_destroy(enemy_controller)
 	this.enemy_list[enemy_controller] = nil;
 end
 
-function this.on_hit_damage(enemy_controller, hit_info)
-	if hit_info == nil then
-		error_handler.report("enemy_handler.on_hit_damage", "No HitInfo");
-		return;
-	end
-
-	local damage = get_damage_method:call(hit_info);
-
-	if damage == nil then
-		error_handler.report("enemy_handler.on_hit_damage", "No Damage");
-		return;
-	end
-
-	if damage == 0 then
-		return;
-	end
-
+function this.on_get_no_damage(enemy_controller)
 	local attacked_enemy = this.get_enemy(enemy_controller);
-	this.update_health(attacked_enemy, damage);
+	this.update_health(attacked_enemy);
 
 	this.on_damage_or_dead(attacked_enemy)
 end
@@ -449,6 +429,14 @@ function this.init_module()
 		return retval;
 	end);
 
+	sdk.hook(do_awake_b_529_4_method, function(args)
+		local enemy_controller = sdk.to_managed_object(args[2]);
+		this.on_do_awake_b_529_4(enemy_controller);
+
+	end, function(retval)
+		return retval;
+	end);
+
 	sdk.hook(do_on_destroy_method, function(args)
 		local enemy_controller = sdk.to_managed_object(args[2]);
 		this.on_destroy(enemy_controller);
@@ -457,17 +445,14 @@ function this.init_module()
 		return retval;
 	end);
 
-	sdk.hook(on_hit_damage_method, function(args)
+	sdk.hook(get_no_damage_method, function(args)
 		local enemy_controller = sdk.to_managed_object(args[2]);
-		local hit_info = sdk.to_managed_object(args[3]);
-
-		this.on_hit_damage(enemy_controller, hit_info);
+		this.on_get_no_damage(enemy_controller);
 
 	end, function(retval)
 		return retval;
 	end);
 
-	
 	sdk.hook(dead_method, function(args)
 		local enemy_controller = sdk.to_managed_object(args[2]);
 		this.on_dead(enemy_controller);

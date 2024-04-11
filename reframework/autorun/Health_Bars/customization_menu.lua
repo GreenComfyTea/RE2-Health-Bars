@@ -125,7 +125,7 @@ function this.draw()
 	local language_changed = false;
 	local menu_font_changed = false;
 	local window_changed = false;
-	
+
 	local index = 1;
 	local language_index = 1;
 
@@ -228,7 +228,7 @@ function this.draw()
 
 	if imgui.tree_node(cached_language.ui_font) then
 		imgui.text(cached_language.font_notice);
-		
+
 		changed, index = imgui.combo(cached_language.family,
 			utils.table.find_index(this.fonts, cached_config.ui_font.family), this.fonts);
 		config_changed = config_changed or changed;

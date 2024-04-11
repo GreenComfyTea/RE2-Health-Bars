@@ -62,7 +62,6 @@ function this.tick()
 	local player_manager = singletons.player_manager;
 	if player_manager == nil then
 		error_handler.report("player_handler.tick", "No PlayerManager");
-		customization_menu.status = "[player_handler.tick] No PlayerManager";
 		return;
 	end
 
@@ -118,13 +117,12 @@ function this.update_aim_target()
 
 	local player_equipment = get_player_equipment_method:call(equipment_manager);
 	if player_equipment == nil then
-		error_handler.report("player_handler.update_aim_target", "No PlayerEquipment");
+		-- error_handler.report("player_handler.update_aim_target", "No PlayerEquipment");
 		return;
 	end
 
 	local equip_weapon = get_equip_weapon_method:call(player_equipment);
 	if equip_weapon == nil then
-		error_handler.report("player_handler.update_aim_target", "No EquipWeapon");
 		return;
 	end
 
