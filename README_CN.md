@@ -121,7 +121,7 @@
 
 <p align="center">
 	<a>
-		<img align="center" src="https://user-images.githubusercontent.com/30152047/226180919-2ddaacc2-f8c7-4688-8ec0-1958da87f91a.png" />
+		<img align="center" src="https://github.com/GreenComfyTea/RE2-Health-Bars/assets/30152047/a0a1f6a4-15f9-44ba-be72-6b1311edeeaf" />
 	</a>
 </p>
 
