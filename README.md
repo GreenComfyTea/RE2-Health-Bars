@@ -126,7 +126,7 @@
 </p>
 
 # Links
-* **[Nexus Mods](https://nexusmods.com/residentevilvillage/mods/401)**
+* **[Nexus Mods](https://www.nexusmods.com/residentevil22019/mods/1478)**
 
 # Requirements
 1. [REFramework](https://nexusmods.com/residentevil22019/mods/1097) (v1.5.3+);
@@ -143,7 +143,7 @@
 
 
 3. Download the mod:
-    * Official release can be downloaded from [Nexus Mods](https://nexusmods.com/residentevilvillage/mods/401);
+    * Official release can be downloaded from [Nexus Mods](https://www.nexusmods.com/residentevil22019/mods/1478);
     * Nightly builds are available in [this repo](https://github.com/GreenComfyTea/RE2-Health-Bars) and can contain broken functionality, debugging info on screen, bugs and might require the latest [nightly build](https://github.com/praydog/REFramework-nightly/releases) of [REFramework](https://nexusmods.com/residentevil22019/mods/1097). Use with caution!
 4. Extract the mod from the archive and copy it into Resident Evil 2 folder. Final path should look like this: `/RESIDENT EVIL 2  BIOHAZARD RE2/reframework/`  
 
