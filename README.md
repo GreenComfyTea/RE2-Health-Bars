@@ -95,8 +95,8 @@
 	</a>
 	<br>
 	<br>
-	<a href="https://nexusmods.com/residentevilvillage/mods/401">
-		<img alt="Website" src="https://custom-icon-badges.demolab.com/website?down_color=red&down_message=down&up_color=brightgreen&up_message=up&logo=link&url=https://nexusmods.com/residentevilvillage/mods/401" />
+	<a href="https://nexusmods.com/residentevil22019/mods/1478">
+		<img alt="Website" src="https://custom-icon-badges.demolab.com/website?down_color=red&down_message=down&up_color=brightgreen&up_message=up&logo=link&url=https://nexusmods.com/residentevil22019/mods/1478" />
 	</a>
 	<a href="https://github.com/GreenComfyTea?tab=followers">
 		<img alt="Followers" src="https://custom-icon-badges.demolab.com/github/followers/GreenComfyTea?logo=people" />
