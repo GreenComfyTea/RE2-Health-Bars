@@ -41,6 +41,7 @@ local os = os;
 this.player = {};
 this.player.position = Vector3f.new(0, 0, 0);
 this.player.is_aiming = false;
+this.player.aim_target = nil;
 
 local player_manager_type_def = sdk.find_type_definition("app.ropeway.PlayerManager");
 local get_current_position_method = player_manager_type_def:get_method("get_CurrentPosition");
