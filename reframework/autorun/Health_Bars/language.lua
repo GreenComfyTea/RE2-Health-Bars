@@ -87,7 +87,7 @@ this.default_language = {
 
 		hide_if_dead = "Hide if Dead",
 		hide_if_full_health = "Hide if Full Health",
-		hide_if_enemy_is_not_in_sight = "Hide if Enemy Is Not In Sight",
+		hide_if_enemy_is_not_in_sight = "Hide if Enemy Is Not in Sight",
 
 		opacity_falloff = "Opacity Falloff",
 		max_distance = "Max Distance",
