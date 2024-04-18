@@ -60,7 +60,6 @@ this.default_language = {
 
 		enabled = "Enabled",
 		reset_config = "Reset Config",
-		status = "Status",
 
 		menu_font_change_disclaimer = "Changing Language and Menu Font Size several times will cause a crash!",
 		language = "Language",

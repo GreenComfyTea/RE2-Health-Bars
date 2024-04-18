@@ -85,9 +85,7 @@ local function main_loop()
 	if not config.current_config.enabled then
 		return;
 	end
-
-	customization_menu.status = "OK";
-
+	
 	player_handler.tick();
 	enemy_handler.update_all_positions();
 	enemy_handler.draw_enemies();

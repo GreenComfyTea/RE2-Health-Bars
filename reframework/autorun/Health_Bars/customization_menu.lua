@@ -7,6 +7,7 @@ local label_customization;
 local bar_customization;
 local time;
 local enemy_handler;
+local error_handler;
 
 local sdk = sdk;
 local tostring = tostring;
@@ -37,8 +38,6 @@ local draw = draw;
 local Vector2f = Vector2f;
 local reframework = reframework;
 local os = os;
-
-this.status = "OK";
 
 this.font = nil;
 this.full_font_range = {0x1, 0xFFFF, 0};
