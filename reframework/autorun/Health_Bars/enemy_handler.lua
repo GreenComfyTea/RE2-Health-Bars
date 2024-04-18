@@ -79,7 +79,7 @@ function this.new(enemy_controller)
 	enemy.game_object = nil;
 
 	enemy.health = -1;
-	enemy.max_health = -100;
+	enemy.max_health = -1;
 	enemy.health_percentage = 0;
 	enemy.is_dead = false;
 
@@ -373,6 +373,10 @@ end
 
 function this.on_do_awake_b_529_4(enemy_controller)
 	local enemy = this.get_enemy(enemy_controller);
+	if enemy == nil then
+		return;
+	end
+
 	this.update_health(enemy);
 end
 
@@ -382,6 +386,10 @@ end
 
 function this.on_get_no_damage(enemy_controller)
 	local attacked_enemy = this.get_enemy(enemy_controller);
+	if attacked_enemy == nil then
+		return;
+	end
+
 	this.update_health(attacked_enemy);
 
 	this.on_damage_or_dead(attacked_enemy)
@@ -389,7 +397,10 @@ end
 
 function this.on_dead(enemy_controller)
 	local attacked_enemy = this.get_enemy(enemy_controller);
-
+	if attacked_enemy == nil then
+		return;
+	end
+	
 	this.update_health(attacked_enemy);
 	this.on_damage_or_dead(attacked_enemy)
 end
