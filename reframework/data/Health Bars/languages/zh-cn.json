@@ -1,11 +1,9 @@
 {
     "customization_menu": {
-        "add_enemy_height_to_world_offset": "将敌人高度添加到世界偏移",
         "apply": "应用",
         "apply_time_duration_on_aim_target": "在瞄准目标过程中应用时间持续效果",
         "apply_time_duration_on_aiming": "在瞄准过程中应用时间持续效果",
         "apply_time_duration_on_damage_dealt": "对造成的伤害应用时间持续效果",
-        "apply_time_duration_on_using_scope": "在用瞄准镜瞄准过程中应用时间持续效果",
         "background": "背景",
         "bold": "粗体",
         "bottom_to_top": "从下到上",
