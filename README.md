@@ -43,7 +43,7 @@
 		<img alt="REFramework Dependency" src="https://custom-icon-badges.demolab.com/badge/dependency-REFramework%20v1.5.3%2B-green?logo=package-dependencies" />
 	</a>
    	<a href="https://nexusmods.com/residentevil22019/mods/1475">
-		<img alt="In-Game Menu Dependency" src="https://custom-icon-badges.demolab.com/badge/dependency-REFramework%20Direct2D%20v1.0.1%2B-yellow?logo=package-dependencies" />
+		<img alt="REFramework Direct2D Dependency" src="https://custom-icon-badges.demolab.com/badge/dependency-REFramework%20Direct2D%20v1.0.1%2B-yellow?logo=package-dependencies" />
 	</a>
 		<br>
 	<br>
