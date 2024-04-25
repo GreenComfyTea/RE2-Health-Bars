@@ -133,7 +133,7 @@
 2. **[REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475) (v0.4.0或者更高版本).
 
 # 如何安装？:
-1. 先安装**[REFramework](https://github.com/praydog/REFramework-nightly/releases)**;
+1. 先安装 **[REFramework](https://github.com/praydog/REFramework-nightly/releases)**;
 2. 再安装 **[REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475)**;
 >**:pushpin: Windows:** 工作正常。  
   
@@ -144,7 +144,7 @@
 
 3. 下载这些mod:
     * 官方所发布的下载地址是 **[Nexus Mods](https://www.nexusmods.com/residentevil22019/mods/1478)**;
-    * 每晚构建版本可以在[此存储库](https://github.com/GreenComfyTea/RE2-Health-Bars)中获取，可能包含错误功能、屏幕上的调试信息、错误和可能需要最新的[每晚构建版本](https://github.com/praydog/REFramework-nightly/releases)的[REFramework](https://nexusmods.com/residentevil22019/mods/1097)。请谨慎使用！  
+    * 每晚构建版本可以在 **[此存储库](https://github.com/GreenComfyTea/RE2-Health-Bars)** 中获取，可能包含错误功能、屏幕上的调试信息、错误和可能需要最新的 **[每晚构建版本](https://github.com/praydog/REFramework-nightly/releases)** 的 **[REFramework](https://nexusmods.com/residentevil22019/mods/1097)**。请谨慎使用！  
 4. 从压缩包中解压mod文件(解压的后你应该得到**reframework**文件夹)，并将其复制进**RESIDENT EVIL 2 BIOHAZARD RE2**游戏根目录中。最终路径应该如下所示：`/RESIDENT EVIL 2  BIOHAZARD RE2/reframework/`。
    > reframework文件夹目录下应该有 `autorun`,`data`,`font` 这三个文件夹。
   
