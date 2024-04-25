@@ -1,7 +1,7 @@
 <p align="center">
 	<h2 align="center"><b>为生化危机2设计的"生命值(血条)"模组 简体中文翻译版</b></h2>
 	<p align="center">
-		<a href="README.md">English</a> | <b>简体中文</b>
+		<b><a href="README.md">English</a></b> | <b>简体中文</b>
 	</p>
 	<p align="center">为生化危机2设计的"生命值(血条)"模组。</p>
 </p>
@@ -129,29 +129,29 @@
 * **[Nexus Mods](https://www.nexusmods.com/residentevil22019/mods/1478)**  
 
 # 模组前置需求  
-1. [REFramework](https://nexusmods.com/residentevil22019/mods/1097) ([Nightly](https://github.com/praydog/REFramework-nightly/releases) v1.5.4或者更高版本);
-2. [REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475) (v0.4.0或者更高版本).
+1. **[REFramework](https://nexusmods.com/residentevil22019/mods/1097)** (**[Nightly](https://github.com/praydog/REFramework-nightly/releases)** v1.5.4或者更高版本);
+2. **[REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475) (v0.4.0或者更高版本).
 
 # 如何安装？:
-1. 先安装[REFramework](https://www.nexusmods.com/residentevil22019/mods/1097);
-2. 再安装 [REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475);
+1. 先安装**[REFramework](https://github.com/praydog/REFramework-nightly/releases)**;
+2. 再安装 **[REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475)**;
 >**:pushpin: Windows:** 工作正常。  
   
->**:pushpin: Linux:** 最新版本的Proton(实验版本，Experimental。译者没有Steam Deck或者带独显的Linux，仅供参考。)似乎也能使mod正常工作 (https://github.com/cursey/reframework-d2d/issues/5)。
+>**:pushpin: Linux:** 最新版本的Proton(实验版本，Experimental。译者没有Steam Deck或者带独显的Linux，仅供参考。)似乎也能使mod正常工作 (**https://github.com/cursey/reframework-d2d/issues/5**)。
   
->**:pushpin: Steam Deck:** 我见到有人报告mod可以正常工作，但没有确切信息来说明是否可靠。 您可能需要自行在nexus查找资料和解决方案来确保mod正常运行。([REFramework](https://www.nexusmods.com/residentevil22019/mods/1097), [REFramework Direct2D](https://nexusmods.com/monsterhunterrise/mods/134)).
+>**:pushpin: Steam Deck:** 我见到有人报告mod可以正常工作，但没有确切信息来说明是否可靠。 您可能需要自行在nexus查找资料和解决方案来确保mod正常运行。(**[REFramework](https://www.nexusmods.com/residentevil22019/mods/1097), [REFramework Direct2D](https://nexusmods.com/monsterhunterrise/mods/134)**).
    
 
 3. 下载这些mod:
-    * 官方所发布的下载地址是 [Nexus Mods](https://www.nexusmods.com/residentevil22019/mods/1478);
+    * 官方所发布的下载地址是 **[Nexus Mods](https://www.nexusmods.com/residentevil22019/mods/1478)**;
     * 每晚构建版本可以在[此存储库](https://github.com/GreenComfyTea/RE2-Health-Bars)中获取，可能包含错误功能、屏幕上的调试信息、错误和可能需要最新的[每晚构建版本](https://github.com/praydog/REFramework-nightly/releases)的[REFramework](https://nexusmods.com/residentevil22019/mods/1097)。请谨慎使用！  
 4. 从压缩包中解压mod文件(解压的后你应该得到**reframework**文件夹)，并将其复制进**RESIDENT EVIL 2 BIOHAZARD RE2**游戏根目录中。最终路径应该如下所示：`/RESIDENT EVIL 2  BIOHAZARD RE2/reframework/`。
    > reframework文件夹目录下应该有 `autorun`,`data`,`font` 这三个文件夹。
   
 # 如何编译?
 **前置软件:**
-+ [lua-amalg](https://github.com/siffiejoe/lua-amalg)    
-+ [Lua 5.4+](https://lua.org/)  
++ **[lua-amalg](https://github.com/siffiejoe/lua-amalg)**;    
++ **[Lua 5.4+](https://lua.org/)**.  
 使用这些软件来编译脚本。  
   
 **编译命令示例:(注意：将"lua54.exe”和“amalg.lua”的路径替换为您的路径, run it inside `autorun` folder with `cmd`):**  
