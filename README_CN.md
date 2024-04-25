@@ -130,7 +130,7 @@
 
 # 模组前置需求  
 1. **[REFramework](https://nexusmods.com/residentevil22019/mods/1097)** (**[Nightly](https://github.com/praydog/REFramework-nightly/releases)** v1.5.4或者更高版本);
-2. **[REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475) (v0.4.0或者更高版本).
+2. **[REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475)** (v0.4.0或者更高版本).
 
 # 如何安装？:
 1. 先安装 **[REFramework](https://github.com/praydog/REFramework-nightly/releases)**;
