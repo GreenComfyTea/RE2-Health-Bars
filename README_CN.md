@@ -137,7 +137,7 @@
 2. 再安装 **[REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475)**;
 >**:pushpin: Windows:** 工作正常。  
   
->**:pushpin: Linux:** 最新版本的Proton(实验版本，Experimental。译者没有Steam Deck或者带独显的Linux，仅供参考。)似乎也能使mod正常工作 (**https://github.com/cursey/reframework-d2d/issues/5**)。
+>**:pushpin: Linux:** 最新版本的Proton(实验版本，Experimental。译者没有Steam Deck或者带独显的Linux，仅供参考。)似乎也能使mod正常工作 (**https://github.com/cursey/reframework-d2d/issues/5)**。
   
 >**:pushpin: Steam Deck:** 我见到有人报告mod可以正常工作，但没有确切信息来说明是否可靠。 您可能需要自行在nexus查找资料和解决方案来确保mod正常运行。(**[REFramework](https://www.nexusmods.com/residentevil22019/mods/1097), [REFramework Direct2D](https://nexusmods.com/monsterhunterrise/mods/134)**).
    
