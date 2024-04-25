@@ -41,7 +41,6 @@ local reframework = reframework;
 local os = os;
 
 this.enemy_list = {};
-this.enemy_game_object_list = {};
 this.update_time_limit = 0.5;
 
 local enemy_controller_type_def = sdk.find_type_definition("app.ropeway.EnemyController");
@@ -190,7 +189,6 @@ function this.update_game_object(enemy)
 	end
 
 	enemy.game_object = enemy_game_object;
-	this.enemy_game_object_list[enemy_game_object] = enemy;
 end
 
 function this.update_head_joint(enemy)
@@ -381,6 +379,11 @@ function this.on_do_awake_b_529_4(enemy_controller)
 end
 
 function this.on_destroy(enemy_controller)
+	local enemy = this.get_enemy(enemy_controller);
+	if enemy == nil then
+		return;
+	end
+
 	this.enemy_list[enemy_controller] = nil;
 end
 
