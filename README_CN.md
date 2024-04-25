@@ -129,12 +129,12 @@
 * **[Nexus Mods](https://www.nexusmods.com/residentevil22019/mods/1478)**.  
 
 # 模组前置需求  
-1. **[REFramework](https://nexusmods.com/residentevil22019/mods/1097) (**[Nightly](https://github.com/praydog/REFramework-nightly/releases)** v1.5.4或者更高版本);
+1. **[REFramework](https://nexusmods.com/residentevil22019/mods/1097)** (**[Nightly](https://github.com/praydog/REFramework-nightly/releases)** v1.5.4或者更高版本);
 2. **[REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475)** (v0.4.0或者更高版本).
 
 # 如何安装？:
-1. 先安装[REFramework]([https://www.nexusmods.com/residentevil22019/mods/1097](https://github.com/praydog/REFramework-nightly/releases));
-2. 再安装 [REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475);
+1. 先安装 **[REFramework]([https://www.nexusmods.com/residentevil22019/mods/1097](https://github.com/praydog/REFramework-nightly/releases))**;
+2. 再安装 **[REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475)**;
    
 >**:pushpin: Windows:** 工作正常。  
   
