@@ -133,7 +133,7 @@
 2. **[REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475)** (v1.0.1+).
 
 # How to install:
-1. Install **[REFramework](https://nexusmods.com/residentevil22019/mods/1097)**;
+1. Install **[REFramework](https://github.com/praydog/REFramework-nightly/releases)**;
 2. Install **[REFramework Direct2D](https://nexusmods.com/residentevil22019/mods/1475)**;
 >**:pushpin: Windows:** Works normally.
 
