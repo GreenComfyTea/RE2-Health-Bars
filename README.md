@@ -156,7 +156,7 @@
 
 **Compilation command (replace the paths to `lua54.exe`, `amalg.lua` to yours, run it inside `autorun` folder with `cmd`):**
 
-`"D:\Programs\Lua Amalg\lua54.exe" "D:\Programs\Lua Amalg\amalg.lua" -o Health_Bars_precompiled.lua -d -s Health_Bars.lua Health_Bars.bar_customization Health_Bars.config Health_Bars.customization_menu Health_Bars.drawing Health_Bars.enemy_handler Health_Bars.error_handler Health_Bars.game_handler Health_Bars.label_customization Health_Bars.language Health_Bars.player_handler Health_Bars.screen Health_Bars.singletons Health_Bars.time Health_Bars.utils`
+`"D:\Programs\Lua Amalg\lua54.exe" "D:\Programs\Lua Amalg\amalg.lua" -o Health_Bars_precompiled.lua -d -s Health_Bars.lua Health_Bars.bar_customization Health_Bars.config Health_Bars.customization_menu Health_Bars.drawing Health_Bars.enemy_handler Health_Bars.error_handler Health_Bars.game_handler Health_Bars.label_customization Health_Bars.language Health_Bars.player_handler Health_Bars.screen Health_Bars.singletons Health_Bars.time Health_Bars.utils Health_Bars.error_handler`
 
 # Credits
 + **GreenComfyTea** - creator of the mod and it's main contributor.   
