@@ -1,9 +1,7 @@
 local this = {};
 
-local utils;
 local singletons;
 local config;
-local customization_menu;
 local enemy_handler;
 local time;
 local error_handler;
@@ -93,8 +91,9 @@ function this.update_position(player_manager)
 end
 
 function this.update_is_aiming(player_manager)
-	local player_condition = get_current_player_condition_method:call(player_manager);
+	local cached_config = config.current_config.settings;
 
+	local player_condition = get_current_player_condition_method:call(player_manager);
 	if player_condition == nil then
 		return;
 	end
@@ -107,9 +106,17 @@ function this.update_is_aiming(player_manager)
 	end
 
 	this.player.is_aiming = is_hold;
+
+	if is_hold and cached_config.apply_time_duration_on_aiming then
+		for enemy_context, enemy in pairs(enemy_handler.enemy_list) do
+			enemy_handler.update_last_reset_time(enemy);
+		end
+	end
 end
 
 function this.update_aim_target()
+	local cached_config = config.current_config.settings;
+
 	local equipment_manager = singletons.equipment_manager;
 	if equipment_manager == nil then
 		error_handler.report("player_handler.update_aim_target", "No EquipmentManager");
@@ -127,13 +134,37 @@ function this.update_aim_target()
 		return;
 	end
 
-	this.player.aim_target = get_enemy_controller_method:call(equip_weapon);
+	local target_enemy_controller = get_enemy_controller_method:call(equip_weapon);
+	this.player.aim_target = target_enemy_controller;
+
+	if target_enemy_controller == nil then
+		return;
+	end
+
+	local target_enemy = enemy_handler.enemy_list[target_enemy_controller];
+	if target_enemy == nil then
+		return;
+	end
+
+	if cached_config.reset_time_duration_on_aim_target_for_everyone then
+		for enemy_context, enemy in pairs(enemy_handler.enemy_list) do
+			if time.total_elapsed_script_seconds - enemy.last_reset_time < cached_config.time_duration then
+				enemy_handler.update_last_reset_time(enemy);
+			end
+		end
+	end
+	
+	if cached_config.apply_time_duration_on_aim_target then
+		enemy_handler.update_last_reset_time(target_enemy);
+	end
 end
 
 function this.init_module()
 	singletons = require("Health_Bars.singletons");
-	customization_menu = require("Health_Bars.customization_menu");
 	error_handler = require("Health_Bars.error_handler");
+	config = require("Health_Bars.config");
+	time = require("Health_Bars.time");
+	enemy_handler = require("Health_Bars.enemy_handler");
 end
 
 return this;
